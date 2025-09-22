@@ -1,0 +1,239 @@
+/* Reset */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfe;
+    margin: 0;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(90deg, #f8bbd0, #bbdefb);
+    padding: 15px 20px;
+    border-bottom: 3px solid #f48fb1;
+}
+
+.navbar a {
+    position: relative;
+    color: #3f3f3f;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 12px;
+    transition: color 0.2s ease-in-out;
+    border-bottom: none; /* evita doble línea */
+}
+
+.navbar a:hover {
+    color: #6a1b9a;
+}
+
+/* Indicador activo (único subrayado) */
+.navbar a.active::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: -6px;
+    height: 3px;
+    background-color: #6a1b9a;
+    border-radius: 4px;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Botón rosado */
+.btn-primary {
+    background-color: #f48fb1 !important;
+    border-color: #f48fb1 !important;
+    color: white !important;
+}
+.btn-primary:hover {
+    background-color: #f06292 !important;
+    border-color: #f06292 !important;
+    transform: scale(1.05);
+}
+
+/* Botón azul */
+.btn-secondary {
+    background-color: #90caf9;
+    color: #0d47a1;
+}
+.btn-secondary:hover {
+    background-color: #64b5f6;
+    transform: scale(1.05);
+}
+
+/* Botón alternativo - lila */
+.btn-alt {
+    background-color: #ce93d8;
+    color: #4a148c;
+}
+.btn-alt:hover {
+    background-color: #ba68c8;
+    transform: scale(1.05);
+}
+
+/* Botón contorno rosado */
+.btn-outline-primary {
+    color: #f48fb1 !important;
+    border: 2px solid #f48fb1 !important;
+}
+.btn-outline-primary:hover {
+    background-color: #f48fb1 !important;
+    color: white !important;
+    border-color: #f06292 !important;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #fce4ec, #e3f2fd);
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #6a1b9a;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #5e35b1;
+    margin-bottom: 20px;
+}
+
+/* Secciones */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fafafa;
+    margin: 30px auto;
+    border-radius: 20px;
+    max-width: 1000px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #3949ab;
+    margin-bottom: 20px;
+}
+
+/* Testimonios */
+.testimonio {
+    background: #e1bee7;
+    color: #4a148c;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 700px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+.testimonio strong {
+    color: #ad1457;
+}
+
+/* Layout: sticky footer */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+footer {
+    background: linear-gradient(90deg, #bbdefb, #f8bbd0);
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #f48fb1;
+}
+/* Footer Pro */
+.footer {
+    background: linear-gradient(90deg, #bbdefb, #f8bbd0);
+    color: #333;
+    padding: 40px 20px 20px 20px;
+    border-top: 3px solid #f48fb1;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #6a1b9a;
+}
+
+.footer p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #6a1b9a;
+}
+
+.social-links a {
+    display: block;
+    margin: 6px 0;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #f06292;
+}
+
+/* Parte inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 10px;
+}

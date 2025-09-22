@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Proyecto Enfermería</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a asp-controller="Home" asp-action="Index"
+               class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
+                Inicio
+            </a>
+
+            <a asp-controller="Home" asp-action="Lactancia"
+               class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Lactancia" ? "active" : "")">
+                Lactancia
+            </a>
+
+            <a asp-controller="Home" asp-action="Canguro"
+               class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Canguro" ? "active" : "")">
+                Canguro
+            </a>
+
+            <a asp-controller="Testimonios" asp-action="Index"
+               class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Testimonios" ? "active" : "")">
+                Testimonios
+            </a>
+
+            <a asp-controller="Home" asp-action="Contacto"
+               class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Contacto" ? "active" : "")">
+                Contacto
+            </a>
+        </nav>
+    </header>
+
+    <main role="main" class="container my-5">
+        @RenderBody()
+    </main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Sobre el proyecto -->
+        <div class="footer-col">
+            <h5>Proyecto Enfermería</h5>
+            <p>
+                Una iniciativa para brindar recursos confiables sobre 
+                cuidados neonatales, lactancia materna y método canguro.
+            </p>
+        </div>
+
+        <!-- Enlaces útiles -->
+        <div class="footer-col">
+            <h5>Enlaces</h5>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Recursos">Recursos</a></li>
+                <li><a asp-controller="Home" asp-action="Lactancia">Lactancia</a></li>
+                <li><a asp-controller="Home" asp-action="Canguro">Canguro</a></li>
+                <li><a asp-controller="Testimonios" asp-action="Index">Testimonios</a></li>
+                <li><a asp-controller="Home" asp-action="Contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-col">
+            <h5>Síguenos</h5>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank">🌐 Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">📸 Instagram</a>
+                <a href="https://www.youtube.com" target="_blank">▶️ YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <small>&copy; 2025 - Proyecto Enfermería. Todos los derechos reservados.</small>
+    </div>
+</footer>
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

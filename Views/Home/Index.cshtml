@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="p-5 mb-4 bg-light rounded-3" style="background: url('/img/hero.jpg') center/cover no-repeat;">
+    <div class="container py-5 text-white">
+        <h1 class="display-4 fw-bold">Cuidado y Amor en Enfermería</h1>
+        <p class="lead">Un sistema de información para apoyar a madres, padres y profesionales en la lactancia y cuidados neonatales.</p>
+        <a class="btn btn-primary btn-lg" asp-controller="Home" asp-action="Recursos">Explora Nuestros Recursos</a>
+    </div>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <img src="~/img/lactancia.png" class="mb-3" width="80" />
+        <h3>Lactancia Materna</h3>
+        <p>Descubre técnicas y beneficios de la lactancia para fortalecer el vínculo con tu bebé.</p>
+        <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Lactancia">Aprende Más</a>
+    </div>
+    <div class="col-md-4">
+        <img src="~/img/canguro.png" class="mb-3" width="80" />
+        <h3>Cuidados Canguro</h3>
+        <p>Un método probado para mejorar la salud de bebés prematuros y fortalecer el apego.</p>
+        <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Canguro">Descubre Cómo</a>
+    </div>
+    <div class="col-md-4">
+        <img src="~/img/testimonios.png" class="mb-3" width="80" />
+        <h3>Testimonios</h3>
+        <p>Historias reales de familias y profesionales que encontraron apoyo en nuestro sistema.</p>
+        <a class="btn btn-outline-primary" asp-controller="Testimonios" asp-action="Index">Ver Testimonios</a>
+    </div>
+</div>
